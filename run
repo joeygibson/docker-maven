@@ -1,0 +1,4 @@
+docker run --rm=true \
+	-v $(pwd):/usr/local/project \
+	-v $HOME/.m2/repository:/usr/local/m2-repo \
+	joeygibson/maven bash -l -c "cd /usr/local/project && mvn -Dmaven.repo.local=/usr/local/m2-repo clean package"
